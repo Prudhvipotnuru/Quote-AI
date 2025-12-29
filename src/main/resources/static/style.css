@@ -140,9 +140,41 @@ button:active {
     box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4) !important;
 }
 
-
 .stats {
     margin-top: 35px;
     font-size: clamp(13px, 3vw, 15px);
     color: #999;
 }
+
+.whatsapp-channel {
+    margin-top: 30px;
+    padding: 0;
+    background: none;
+    border-radius: 0;
+}
+
+.whatsapp-channel a {
+    display: inline-block !important;
+    background: linear-gradient(135deg, #25D366, #128C7E) !important;
+    color: white !important;
+    text-decoration: none !important;
+    padding: 18px 25px !important;
+    border-radius: 20px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4) !important;
+    transition: all 0.3s ease !important;
+    width: 100% !important;
+    text-align: center !important;
+}
+
+.whatsapp-channel a:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 12px 35px rgba(37, 211, 102, 0.5) !important;
+}
+
+.whatsapp-channel a:active {
+    transform: translateY(0) !important;
+}
+
+

@@ -1,33 +1,44 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CalmAI - Your 2-Min Relaxation Timer</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QuoteAI - Your personalized quote generator</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>😌 QuoteAI</h1>
-        <p class="subtitle">Tell me your mood, get a personalized quote</p>
-        
-        <form id="moodForm" th:action="@{/generateScript}" method="GET">
-            <input type="text" name="mood" id="moodInput" placeholder="Want daily inspiration...">
-            <button type="submit">Generate My Quote</button>
-        </form>
-        
-        <div id="loading" class="hidden">
-            <div class="spinner"></div>
-            <p>AI is creating your personal script...</p>
-        </div>
-        
-        <div id="result" class="hidden"></div>
-        
-        <div class="stats">
-            <span>Powered by Spring AI + GPT-4o-mini</span>
-        </div>
-    </div>
+	<div class="container">
+		<h1>😌 QuoteAI</h1>
+		<p class="subtitle">Tell me your mood, get a personalized quote</p>
 
-    <script src="app.js"></script>
+		<form id="moodForm" th:action="@{/generateScript}" method="GET">
+			<input type="text" name="mood" id="moodInput"
+				placeholder="Want daily inspiration...">
+			<button type="submit">Generate My Quote</button>
+		</form>
+
+		<div id="loading" class="hidden">
+			<div class="spinner"></div>
+			<p>AI is creating your personal script...</p>
+		</div>
+
+		<div id="result" class="hidden"></div>
+
+		<div class="stats">
+			<span>Powered by Spring AI + GPT-4o-mini</span>
+		</div>
+
+		<!-- Replace your WhatsApp section with this -->
+		<div class="whatsapp-channel">
+			<a href="https://whatsapp.com/channel/0029VbBakdrInlqYUkPnPT0y"
+				target="_blank"> 📢 Join WhatsApp Channel<br>
+			<span style="font-size: 14px; font-weight: 500;">Daily AI
+					Quotes + Motivation!</span>
+			</a>
+		</div>
+
+	</div>
+
+	<script src="app.js"></script>
 </body>
 </html>
