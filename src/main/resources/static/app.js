@@ -45,7 +45,8 @@ function showResult(quote, mood) {
 }
 
 function shareQuote(quote, mood) {
-    const shareText = `"${quote}" - AI Quote for "${mood}" quotegen.ai`;
+    const currentUrl = window.location.origin;  // Dynamic!
+    const shareText = `"${quote}" - AI Quote for "${mood}"\n\n✨ Try it: ${currentUrl}`;
     
     if (navigator.share) {
         navigator.share({
