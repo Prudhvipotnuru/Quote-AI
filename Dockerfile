@@ -7,7 +7,8 @@ RUN mvn clean package -DskipTests
 # Run stage with JRE
 FROM eclipse-temurin:21-jre
 WORKDIR /app
-COPY --from=build /app/target/demo-0.0.1-SNAPSHOT.jar app.jar
-ENV PORT=8082
-EXPOSE 8082
-ENTRYPOINT ["java","-jar","app.jar"]
+# FIX: Use EXACT JAR name from your pom.xml
+COPY --from=build /app/target/open-ai-0.0.1-SNAPSHOT.jar app.jar
+ENV PORT=10000
+EXPOSE 10000
+ENTRYPOINT ["sh", "-c", "java -jar /app/app.jar --server.port=$PORT"]
