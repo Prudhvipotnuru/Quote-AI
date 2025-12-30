@@ -16,16 +16,22 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    
+    /* Background image */
+    background-image: url('/forest.jpeg');
+    background-size: cover;        /* fill entire screen */ 
+    background-position: center;   /* keep center in view */
+    background-repeat: no-repeat;  /* no tiling */
 }
 
 .container {
-    background: white;
-    padding: 35px 30px;
-    border-radius: 25px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    background: rgba(0, 0, 0, 0.45);  /* transparent dark layer */
+    padding: 24px 20px;
+    border-radius: 18px;
+    max-width: 420px;
     width: 100%;
-    max-width: 450px; /* Slightly bigger */
-    text-align: center;
+    color: #fff;
+    backdrop-filter: blur(4px);       /* subtle glass effect (optional) */
 }
 
 h1 {

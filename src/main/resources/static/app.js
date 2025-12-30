@@ -68,3 +68,23 @@ async function copyToClipboard(text) {
         alert('Copy manually:\n\n' + text);
     }
 }
+
+const bgAudio = document.getElementById('bg-sound');
+const soundBtn = document.getElementById('soundToggle');
+
+if (bgAudio && soundBtn) {
+  soundBtn.addEventListener('click', async () => {
+    try {
+      if (bgAudio.paused) {
+        await bgAudio.play();
+        soundBtn.textContent = '🌿 Stop Nature Sounds';
+      } else {
+        bgAudio.pause();
+        soundBtn.textContent = '🌿 Play Nature Sounds';
+      }
+    } catch (e) {
+      alert('Browser blocked audio, try tapping again.');
+    }
+  });
+}
+
