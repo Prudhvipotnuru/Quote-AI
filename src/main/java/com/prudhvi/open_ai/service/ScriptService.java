@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import ch.qos.logback.classic.Logger;
 
 @Service
-public class ScriptService implements LlmClient{
+public class ScriptService {
 
 	Logger logger;
 
